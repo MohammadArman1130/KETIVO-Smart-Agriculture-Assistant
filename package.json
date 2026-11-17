@@ -1,0 +1,17 @@
+{
+  "name": "kethivo-smart-agriculture-assistant",
+  "version": "1.0.0",
+  "description": "KETHIVO – Smart Agriculture Assistant with Bilingual EN/KN support, Open-Meteo Weather, Firebase & Gemini Vision API",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+
+<html lang="en"> <head>   <meta charset="UTF-8">   <meta name="viewport" content="width=device-width, initial-scale=1.0">   <title>Farmer Dashboard – KETHIVO</title>      <link rel="icon" type="image/png" href="assets/images/kethivo-logo.png">   <link rel="stylesheet" href="css/style.css">   <link rel="stylesheet" href="css/dashboard.css">   <link rel="stylesheet" href="css/responsive.css">   <script src="[https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js](https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js)"></script> </head> <body data-base="./">   <div class="app-layout">     <aside class="sidebar" id="sidebar"></aside>     <div class="main-wrapper">       <header class="topbar" id="topbar"></header>
+
+```
+  <main class="page-content">
+    <section class="welcome-banner">
+      <div>
+        <h1 id="welcomeName">Namaste, Farmer</h1>
+        <p id="welcomeLoc">📍 Karnataka</p>
+        <p style="margin-top:6px;" data-i18n="dash_sub">Here is your live field overview and farming recommendations.</p>
+      </div>
+      <div class="weather-chip" id="bannerWeather">Loading live weather...</div>
+    </section>
+
+    <section class="kpi-grid">
+      <div class="kpi-card">
+        <div class="kpi-label" data-i18n="kpi_temp">Current Temperature</div>
+        <div class="kpi-value" id="kpiTemp">--</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-label" data-i18n="kpi_humidity">Relative Humidity</div>
+        <div class="kpi-value" id="kpiHumidity">--</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-label" data-i18n="kpi_rain">Today's Rainfall</div>
+        <div class="kpi-value" id="kpiRain">--</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-label" data-i18n="kpi_records">Saved Records</div>
+        <div class="kpi-value" id="kpiRecords">0</div>
+      </div>
+    </section>
+
+    <div class="panel">
+      <div class="panel-header">
+        <h3>🌾 Daily Agricultural Recommendation</h3>
+        <span class="badge badge-green">Live Weather Assisted</span>
+      </div>
+      <p id="dashRecommendation">Analyzing local weather conditions...</p>
+    </div>
+
+    <div class="dash-two-col">
+      <div>
+        <div class="panel">
+          <div class="panel-header">
+            <h2 data-i18n="quick_access">Quick Access</h2>
+          </div>
+          <div class="quick-actions">
+            <a href="pages/irrigation.html" class="quick-link">💧 <span data-i18n="sb_irrigation">Smart Irrigation</span></a>
+            <a href="pages/crop-recommendation.html" class="quick-link">🌱 <span data-i18n="sb_crop">Crop Recommendation</span></a>
+            <a href="pages/weather.html" class="quick-link">⛅ <span data-i18n="sb_weather">Weather Forecast</span></a>
+            <a href="pages/disease-detection.html" class="quick-link">🔬 <span data-i18n="sb_disease">Disease Detection</span></a>
+            <a href="pages/fertilizer.html" class="quick-link">🧪 <span data-i18n="sb_fertilizer">Fertilizer Advisory</span></a>
+            <a href="pages/market-prices.html" class="quick-link">📈 <span data-i18n="sb_market">Market Prices</span></a>
+          </div>
+        </div>
+
+        <div class="panel">
+          <div class="panel-header">
+            <h3>Market Price Reference Trend</h3>
+            <a href="pages/market-prices.html" class="btn btn-sm btn-soft" data-i18n="view_all">View All</a>
+          </div>
+          <canvas id="dashChart" height="120"></canvas>
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-header">
+          <h2 data-i18n="recent_activities">Recent Farming Activities</h2>
+          <a href="pages/history.html" class="btn btn-sm btn-soft" data-i18n="view_all">View All</a>
+        </div>
+        <div id="recentActivityList"></div>
+      </div>
+    </div>
+  </main>
+</div>
+```
+
+&#x20; </div>
+
+&#x20; <script type="module" src="js/dashboard.js"></script>
+
+</body>
+</html>

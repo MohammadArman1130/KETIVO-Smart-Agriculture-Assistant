@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+
+<html lang="en"> <head>   <meta charset="UTF-8">   <meta name="viewport" content="width=device-width, initial-scale=1.0">   <title>Crop Recommendation – KETHIVO</title>  <link rel="icon" type="image/png" href="assets/images/kethivo-logo.png">   <link rel="stylesheet" href="../css/style.css">   <link rel="stylesheet" href="../css/dashboard.css">   <link rel="stylesheet" href="../css/responsive.css"> </head> <body data-base="../">   <div class="app-layout">     <aside class="sidebar" id="sidebar"></aside>     <div class="main-wrapper">       <header class="topbar" id="topbar"></header>       <main class="page-content">         <div class="panel">           <div class="panel-header">             <h2 data-i18n="crop_title">Crop Recommendation System</h2>           </div>
+
+```
+      <form id="cropForm" class="grid-3">
+        <div class="form-group">
+          <label class="form-label" data-i18n="state_label">State</label>
+          <input type="text" id="cropState" class="form-control" required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" data-i18n="district_label">District</label>
+          <input type="text" id="cropDistrict" class="form-control" required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" data-i18n="irr_soil">Soil Type</label>
+          <select id="cropSoil" class="form-control">
+            <option>Red</option>
+            <option>Loamy</option>
+            <option>Black</option>
+            <option>Clay</option>
+            <option>Sandy</option>
+            <option>Alluvial</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" data-i18n="crop_water">Available Water Source</label>
+          <select id="cropWater" class="form-control">
+            <option>Canal / Borewell</option>
+            <option>Limited Borewell</option>
+            <option>Rainfed</option>
+            <option>Abundant Rainfed</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" data-i18n="crop_season">Current Farming Season</label>
+          <select id="cropSeason" class="form-control">
+            <option>Kharif</option>
+            <option>Rabi</option>
+            <option>Summer</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" data-i18n="crop_area">Land Area (Acres)</label>
+          <input type="number" id="cropArea" class="form-control" min="0.25" step="0.25" value="2">
+        </div>
+
+        <div style="grid-column:1 / -1;">
+          <button type="submit" class="btn btn-primary" data-i18n="crop_submit">
+            Find Suitable Crops
+          </button>
+        </div>
+      </form>
+    </div>
+
+    <div id="cropResultWrap" class="hidden">
+      <div class="panel-header">
+        <p id="cropMeta" style="color:var(--text-secondary);"></p>
+        <button type="button" id="saveCropRecBtn" class="btn btn-soft" data-i18n="save_record">
+          Save to Farming History
+        </button>
+      </div>
+      <div class="grid-3" id="cropResultsGrid"></div>
+    </div>
+  </main>
+</div>
+```
+
+&#x20; </div>
+
+&#x20; <script type="module" src="../js/crop.js"></script>
+
+</body>
+</html>

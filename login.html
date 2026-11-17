@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login – KETHIVO</title>
+  <link rel="icon" type="image/png" href="assets/images/kethivo-logo.png">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body class="auth-page">
+  <div class="auth-card">
+    <div class="auth-top">
+      <a href="index.html">
+    <img src="assets/images/kethivo-logo.png" alt="KETHIVO – Smart Agriculture Assistant">
+</a>
+      <select class="lang-select" aria-label="Language">
+        <option value="en">English</option>
+        <option value="kn">ಕನ್ನಡ</option>
+      </select>
+    </div>
+
+    <h1 data-i18n="login_title">Farmer Login</h1>
+    <p class="auth-sub" data-i18n="login_sub">Sign in to access your KETHIVO dashboard and records.</p>
+
+    <div id="firebaseNotice" class="alert alert-warning hidden" data-i18n="firebase_missing_notice"></div>
+    <div id="authAlert" class="alert hidden"></div>
+
+    <form id="loginForm">
+      <div class="form-group">  
+        <label class="form-label" for="loginEmail">Email Address</label> 
+          <input     type="email"     id="loginEmail"     name="email"     class="form-control"     required     placeholder="Enter your email"     autocomplete="email"   > </div>
+
+      <div class="form-group">
+  <label class="form-label" data-i18n="password_label">Password</label>
+
+  <div class="password-wrapper">
+    <input
+      type="password"
+      id="loginPassword"
+      name="password"
+      class="form-control"
+      required
+      placeholder="Enter your password"
+      autocomplete="current-password"
+    >
+
+    <button
+      type="button"
+      class="toggle-password"
+      onclick="togglePasswordVisibility()"
+      aria-label="Show password"
+    >👁</button>
+  </div>
+</div>
+      <button type="submit" id="loginSubmitBtn" class="btn btn-primary" style="width:100%;" data-i18n="login_btn">Sign In</button>
+    </form>
+
+    <p style="text-align:center; margin-top:20px; font-size:0.9rem; color:var(--text-secondary);">
+      <span data-i18n="no_account">New to KETHIVO?</span>
+      <a href="register.html" style="color:var(--forest-green); font-weight:700;" data-i18n="register_btn">Create Account</a>
+    </p>
+  </div>
+
+  <script type="module" src="js/auth.js"></script>
+</body>
+<script>
+function togglePasswordVisibility() {
+  const passwordInput = document.getElementById("loginPassword");
+  const toggleButton = document.querySelector(".toggle-password");
+
+  if (passwordInput.type === "password") {
+    passwordInput.type = "text";
+    toggleButton.textContent = "🙈";
+    toggleButton.setAttribute("aria-label", "Hide password");
+  } else {
+    passwordInput.type = "password";
+    toggleButton.textContent = "👁";
+    toggleButton.setAttribute("aria-label", "Show password");
+  }
+}
+</script>
+</html>

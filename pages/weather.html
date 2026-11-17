@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather Forecast – KETHIVO</title>
+ <link rel="icon" type="image/png" href="assets/images/kethivo-logo.png">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/dashboard.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body data-base="../">
+  <div class="app-layout">
+    <aside class="sidebar" id="sidebar"></aside>
+    <div class="main-wrapper">
+      <header class="topbar" id="topbar"></header>
+      <main class="page-content">
+        <div class="panel">
+          <div class="panel-header">
+            <h2 data-i18n="weather_title">Live Weather Forecast</h2>
+            <span class="badge badge-green">Source: Open-Meteo Live API</span>
+          </div>
+          <form id="weatherSearchForm" style="display:flex; gap:12px; flex-wrap:wrap;">
+            <input type="text" id="weatherCityInput" class="form-control" style="max-width:420px;" data-i18n-placeholder="weather_search_placeholder" required>
+            <button type="submit" class="btn btn-primary" data-i18n="weather_search_btn">Get Forecast</button>
+          </form>
+        </div>
+
+        <div id="weatherStatus" class="alert hidden"></div>
+
+        <div id="weatherResult" class="hidden">
+          <div class="panel">
+            <div class="panel-header">
+              <h3 id="wxLocName">--</h3>
+              <span id="wxCond" class="badge badge-blue">--</span>
+            </div>
+            <div class="kpi-grid" style="margin-bottom:0;">
+              <div class="kpi-card"><div class="kpi-label" data-i18n="kpi_temp">Current Temperature</div><div class="kpi-value" id="wxTemp">--</div></div>
+              <div class="kpi-card"><div class="kpi-label" data-i18n="kpi_humidity">Relative Humidity</div><div class="kpi-value" id="wxHumidity">--</div></div>
+              <div class="kpi-card"><div class="kpi-label">Wind Speed</div><div class="kpi-value" id="wxWind">--</div></div>
+              <div class="kpi-card"><div class="kpi-label" data-i18n="kpi_rain">Today's Rainfall</div><div class="kpi-value" id="wxRain">--</div></div>
+            </div>
+          </div>
+
+          <div class="panel">
+            <div class="panel-header"><h3>🌾 Weather-Based Farming Suggestions</h3></div>
+            <ul id="wxAdviceList" style="padding-left:20px; display:grid; gap:8px;"></ul>
+          </div>
+
+          <div class="panel">
+            <div class="panel-header"><h3>7-Day Forecast</h3></div>
+            <div class="table-wrap">
+              <table>
+                <thead><tr><th>Date</th><th>Condition</th><th>Min / Max Temp</th><th>Rainfall</th></tr></thead>
+                <tbody id="wxForecastBody"></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+  <script type="module" src="../js/weather.js"></script>
+</body>
+</html>

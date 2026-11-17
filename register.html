@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+
+<html lang="en"> <head>   <meta charset="UTF-8">   <meta name="viewport" content="width=device-width, initial-scale=1.0">   <title>Register – KETHIVO</title>   <link rel="icon" type="image/png" href="assets/images/kethivo-logo.png">   <link rel="stylesheet" href="css/style.css">   <link rel="stylesheet" href="css/responsive.css"> </head> <body class="auth-page">   <div class="auth-card" style="max-width:520px;">     <div class="auth-top">       <a href="index.html">
+    <img src="assets/images/kethivo-logo.png" alt="KETHIVO – Smart Agriculture Assistant">
+</a>       <select class="lang-select" aria-label="Language">         <option value="en">English</option>         <option value="kn">ಕನ್ನಡ</option>       </select>     </div>
+
+```
+<h1 data-i18n="register_title">Create Farmer Account</h1>
+<p class="auth-sub" data-i18n="register_sub">Join KETHIVO for personalized crop, weather, and irrigation guidance.</p>
+
+<div id="firebaseNotice" class="alert alert-warning hidden" data-i18n="firebase_missing_notice"></div>
+<div id="authAlert" class="alert hidden"></div>
+
+<form id="registerForm">
+  <div class="grid-2" style="gap:12px;">
+    <div class="form-group">
+      <label class="form-label" data-i18n="name_label">Full Name</label>
+      <input type="text" id="regName" class="form-control" required>
+    </div>
+    <div class="form-group">
+      <label class="form-label" data-i18n="phone_label">Mobile Number</label>
+      <!-- Mobile Number -->
+<input
+  type="tel"
+  id="regPhone"
+  class="form-control"
+  placeholder="Enter your mobile number"
+  maxlength="10"
+>
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="form-label" data-i18n="email_label">Email Address</label>
+    <input type="email" id="regEmail" class="form-control" required>
+  </div>
+  <div class="grid-2" style="gap:12px;">
+    <div class="form-group">
+      <label class="form-label" data-i18n="state_label">State</label>
+      <!-- State -->
+<input
+  type="text"
+  id="regState"
+  class="form-control"
+  placeholder="Enter your state"
+  required
+>
+    </div>
+    <div class="form-group">
+      <label class="form-label" data-i18n="district_label">District / City</label>
+      <!-- District / City -->
+<input
+  type="text"
+  id="regDistrict"
+  class="form-control"
+  placeholder="Enter your district or city"
+  required
+>
+    </div>
+  </div>
+  <div class="grid-2" style="gap:12px;">
+    <div class="form-group">
+      <label class="form-label" data-i18n="primary_crop_label">Primary Crop</label>
+      <input type="text" id="regCrop" class="form-control" value="Paddy">
+    </div>
+    <div class="form-group">   <label class="form-label" data-i18n="password_label">Password</label>
+
+&#x20; <div class="password-wrapper">     <input       type="password"       id="regPassword"       name="password"       class="form-control"       minlength="6"       required       placeholder="Enter your password"       autocomplete="new-password"     >
+ 
+<button
+  type="button"
+  class="toggle-password"
+  onclick="toggleRegisterPassword()"
+  aria-label="Show password"
+>👁  </button>
+
+
+&#x20; </div> </div>
+
+  </div>
+  <button type="submit" id="registerSubmitBtn" class="btn btn-primary" style="width:100%;" data-i18n="register_btn">Create Account</button>
+</form>
+
+<p style="text-align:center; margin-top:20px; font-size:0.9rem; color:var(--text-secondary);">
+  <span data-i18n="have_account">Already registered?</span>
+  <a href="login.html" style="color:var(--forest-green); font-weight:700;" data-i18n="login_btn">Sign In</a>
+</p>
+```
+
+&#x20; </div>
+
+&#x20; <script type="module" src="js/auth.js"></script>
+
+</body>
+<script>
+function toggleRegisterPassword() {
+  const passwordInput = document.getElementById("regPassword");
+  const toggleButton = document.querySelector(".toggle-password");
+
+  if (passwordInput.type === "password") {
+    passwordInput.type = "text";
+    toggleButton.textContent = "🙈";
+    toggleButton.setAttribute("aria-label", "Hide password");
+  } else {
+    passwordInput.type = "password";
+    toggleButton.textContent = "👁";
+    toggleButton.setAttribute("aria-label", "Show password");
+  }
+}
+</script>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html lang="en"> <head>   <meta charset="UTF-8">   <meta name="viewport" content="width=device-width, initial-scale=1.0">   <title>AI Disease Detection – KETHIVO</title>  <link rel="icon" type="image/png" href="assets/images/kethivo-logo.png">   <link rel="stylesheet" href="../css/style.css">   <link rel="stylesheet" href="../css/dashboard.css">   <link rel="stylesheet" href="../css/responsive.css"> </head> <body data-base="../">   <div class="app-layout">     <aside class="sidebar" id="sidebar"></aside>     <div class="main-wrapper">       <header class="topbar" id="topbar"></header>       <main class="page-content">         <div class="dash-two-col">           <div class="panel">             <div class="panel-header"><h2 data-i18n="disease_title">AI Crop Disease Detection</h2></div>             <div class="form-group">               <label class="form-label">Crop Name (Optional)</label>               <input type="text" id="diseaseCropInput" class="form-control" placeholder="e.g., Tomato, Paddy, Cotton">             </div>             <div class="upload-zone" id="dropZone">               <p style="font-size:2rem; margin-bottom:8px;">📸</p>               <p data-i18n="disease_upload_prompt">Click or drag &amp; drop a crop leaf image (JPG/PNG)</p>               <input type="file" id="leafFileInput" accept="image/*" class="hidden">               <img id="leafPreview" class="preview-img hidden" alt="Leaf Preview">             </div>             <div style="display:flex; gap:12px; flex-wrap:wrap; margin-top:16px;">               <button type="button" id="analyzeBtn" class="btn btn-primary" disabled data-i18n="disease_analyze_btn">Analyze Leaf Image</button>               <button type="button" id="demoAnalyzeBtn" class="btn btn-outline hidden" data-i18n="disease_demo_btn">Run Demonstration Mode</button>             </div>     <div id="diseaseStatus" class="alert hidden" style="margin-top:16px;"></div>         </div>
+
+```
+      <div class="panel hidden" id="diseaseResult">
+        <div class="panel hidden" id="diseaseResult">
+
+    <div class="panel-header">
+        <h3 id="diagName">--</h3>
+        <span id="diagModeBadge" class="badge badge-green">Mode</span>
+    </div>
+
+    <p id="diagConfidence"
+       style="font-weight:600; color:var(--text-secondary); margin-bottom:12px;">
+    </p>
+
+    <h4>Observed Symptoms</h4>
+    <ul id="diagSymptoms" style="padding-left:20px; margin:8px 0 16px;"></ul>
+
+    <h4>Preventive Recommendations</h4>
+    <ul id="diagPrevention" style="padding-left:20px; margin:8px 0 16px;"></ul>
+
+    <div class="alert alert-warning" id="diagDisclaimer"></div>
+
+    <button type="button" id="saveDiseaseBtn"
+            class="btn btn-soft" data-i18n="save_record">
+        Save to Farming History
+    </button>
+
+</div>
+    </div>
+  </main>
+</div>
+```
+
+&#x20; </div>
+&#x20; <script type="module" src="../js/disease.js"></script>
+</body>
+</html>

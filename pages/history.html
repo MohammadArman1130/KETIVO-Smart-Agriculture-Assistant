@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<html lang="en"> <head>   <meta charset="UTF-8">   <meta name="viewport" content="width=device-width, initial-scale=1.0">   <title>Farming History – KETHIVO</title>  <link rel="icon" type="image/png" href="assets/images/kethivo-logo.png">   <link rel="stylesheet" href="../css/style.css">   <link rel="stylesheet" href="../css/dashboard.css">   <link rel="stylesheet" href="../css/responsive.css"> </head> <body data-base="../">   <div class="app-layout">     <aside class="sidebar" id="sidebar"></aside>     <div class="main-wrapper">       <header class="topbar" id="topbar"></header>       <main class="page-content">         <div class="panel">           <div class="panel-header"><h2 data-i18n="history_add_note">Log Field Activity</h2></div>           <form id="addNoteForm" class="grid-3">             <div class="form-group">               <label class="form-label">Category</label>               <select id="noteCategory" class="form-control">                 <option>Field Note</option>                 <option>Irrigation</option>                 <option>Crop Advisory</option>                 <option>Fertilizer Advisory</option>                 <option>Disease Screening</option>               </select>             </div>             <div class="form-group">               <label class="form-label">Activity Title</label>               <input type="text" id="noteTitle" class="form-control" placeholder="e.g., Sowed Ragi in East Plot" required>             </div>             <div class="form-group">               <label class="form-label">Details</label>               <input type="text" id="noteSummary" class="form-control" placeholder="Optional notes or quantity">             </div>             <div style="grid-column:1 / -1;">               <button type="submit" class="btn btn-primary" data-i18n="save_record">Save to Farming History</button>             </div>           </form>         </div>
+
+```
+    <div class="panel">
+      <div class="panel-header">
+        <h2 data-i18n="history_title">Farming History &amp; Records</h2>
+        <select id="historyFilter" class="form-control" style="max-width:220px;">
+          <option value="All">All Categories</option>
+          <option>Irrigation</option>
+          <option>Crop Advisory</option>
+          <option>Disease Screening</option>
+          <option>Fertilizer Advisory</option>
+          <option>Field Note</option>
+        </select>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Category</th><th>Activity &amp; Summary</th><th>Date</th><th>Action</th></tr></thead>
+          <tbody id="historyTableBody"></tbody>
+        </table>
+      </div>
+    </div>
+  </main>
+</div>
+```
+
+&#x20; </div>
+&#x20; <script type="module" src="../js/history.js"></script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fertilizer Advisory – KETHIVO</title>
+  <link rel="icon" type="image/png" href="assets/images/kethivo-logo.png">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/dashboard.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body data-base="../">
+  <div class="app-layout">
+    <aside class="sidebar" id="sidebar"></aside>
+    <div class="main-wrapper">
+      <header class="topbar" id="topbar"></header>
+      <main class="page-content">
+        <div class="dash-two-col">
+          <div class="panel">
+            <div class="panel-header"><h2 data-i18n="fert_title">Fertilizer Advisory</h2></div>
+            <form id="fertForm">
+              <div class="form-group">
+                <label class="form-label" data-i18n="irr_crop">Crop Type</label>
+                <select id="fertCrop" class="form-control">
+                  <option>Paddy (Rice)</option>
+                  <option>Ragi (Finger Millet)</option>
+                  <option>Maize</option>
+                  <option>Groundnut</option>
+                  <option>Cotton</option>
+                  <option>Vegetables (Tomato / Chilli)</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label class="form-label" data-i18n="fert_stage">Growth Stage</label>
+                <select id="fertStage" class="form-control">
+                  <option>Basal / Sowing</option>
+                  <option>Vegetative</option>
+                  <option>Flowering / Fruiting</option>
+                  <option>Maturity</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label class="form-label" data-i18n="irr_soil">Soil Type</label>
+                <select id="fertSoil" class="form-control">
+                  <option>Red</option>
+                  <option>Loamy</option>
+                  <option>Black</option>
+                  <option>Clay</option>
+                  <option>Sandy</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label class="form-label" data-i18n="fert_soil_test">Do you have soil test values?</label>
+                <select id="hasSoilTest" class="form-control">
+                  <option value="no">No</option>
+                  <option value="yes">Yes</option>
+                </select>
+              </div>
+              <div id="soilTestFields" class="grid-2 hidden" style="gap:12px;">
+                <div class="form-group"><label class="form-label">Soil pH</label><input type="number" step="0.1" id="soilPh" class="form-control" placeholder="6.5"></div>
+                <div class="form-group"><label class="form-label">Nitrogen (kg/ha)</label><input type="number" id="soilN" class="form-control" placeholder="240"></div>
+                <div class="form-group"><label class="form-label">Phosphorus (kg/ha)</label><input type="number" id="soilP" class="form-control" placeholder="18"></div>
+                <div class="form-group"><label class="form-label">Potassium (kg/ha)</label><input type="number" id="soilK" class="form-control" placeholder="160"></div>
+              </div>
+              <button type="submit" class="btn btn-primary" data-i18n="fert_submit">Get Fertilizer Guidance</button>
+            </form>
+          </div>
+
+          <div class="panel hidden" id="fertResult">
+            <div class="panel-header">
+              <h3 id="fertHeadline">Guidance</h3>
+              <span class="badge badge-green">ICAR/SAU Reference</span>
+            </div>
+            <ul id="fertNotesList" style="padding-left:20px; display:grid; gap:10px; margin-bottom:18px;"></ul>
+            <div class="alert alert-info">Note: General guidance only. Obtain a Soil Health Card test before purchasing bulk fertilizers.</div>
+            <button type="button" id="saveFertBtn" class="btn btn-soft" data-i18n="save_record">Save to Farming History</button>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+  <script type="module" src="../js/fertilizer.js"></script>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+
+<html lang="en"> 
+    <head>   <meta charset="UTF-8">   <meta name="viewport" content="width=device-width, initial-scale=1.0">   <title>Smart Irrigation – KETHIVO</title>   <link rel="icon" type="image/png" href="assets/images/kethivo-logo.png">  <link rel="stylesheet" href="../css/style.css">   <link rel="stylesheet" href="../css/dashboard.css">   <link rel="stylesheet" href="../css/responsive.css"> </head> <body data-base="../">   <div class="app-layout">     <aside class="sidebar" id="sidebar"></aside>     <div class="main-wrapper">       <header class="topbar" id="topbar"></header>       <main class="page-content">         <div class="alert alert-info" data-i18n="irr_notice"></div>
+
+    <div class="dash-two-col">
+      <div class="panel">
+        <div class="panel-header">
+          <h2 data-i18n="irr_title">Smart Irrigation Advisory</h2>
+        </div>
+
+        <form id="irrigationForm">
+          <div class="form-group">
+            <label class="form-label" data-i18n="irr_crop">Crop Type</label>
+            <select id="irrCrop" class="form-control">
+              <option>Paddy (Rice)</option>
+              <option>Ragi (Finger Millet)</option>
+              <option>Maize</option>
+              <option>Sugarcane</option>
+              <option>Tomato / Vegetables</option>
+              <option>Groundnut</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" data-i18n="irr_soil">Soil Type</label>
+            <select id="irrSoil" class="form-control">
+              <option>Loamy</option>
+              <option>Red</option>
+              <option>Clay</option>
+              <option>Black</option>
+              <option>Sandy</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" data-i18n="irr_last_date">Last Irrigation Date</label>
+            <input type="date" id="irrLastDate" class="form-control" required>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" data-i18n="irr_condition">Current Field Condition</label>
+            <select id="irrCondition" class="form-control">
+              <option value="Dry">Dry</option>
+              <option value="Slightly Moist">Slightly Moist</option>
+              <option value="Wet">Wet</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" data-i18n="irr_location">Location (City / District)</label>
+            <input type="text" id="irrLocation" class="form-control" required>
+          </div>
+
+          <button type="submit" id="irrSubmitBtn" class="btn btn-primary" data-i18n="irr_submit">
+            Generate Irrigation Estimate
+          </button>
+        </form>
+      </div>
+
+      <div class="panel hidden" id="irrResultCard">
+        <div class="panel-header">
+          <h3>Advisory Estimate</h3>
+          <span id="irrStatusBadge" class="badge badge-green">Status</span>
+        </div>
+
+        <p><strong>Reason:</strong> <span id="irrReason"></span></p>
+
+        <p style="margin-top:10px;">
+          <strong>Rainfall Influence:</strong>
+          <span id="irrRainImpact"></span>
+        </p>
+
+        <p style="margin-top:10px;">
+          <strong>Suggested Next Action:</strong>
+          <span id="irrNextAction"></span>
+        </p>
+
+        <div class="alert alert-success" style="margin-top:16px;">
+          <strong>Water Conservation Tip:</strong>
+          <span id="irrConservation"></span>
+        </div>
+
+        <button type="button" id="saveIrrBtn" class="btn btn-soft" data-i18n="save_record">
+          Save to Farming History
+        </button>
+      </div>
+    </div>
+  </main>
+</div>
+
+&#x20; </div>
+
+&#x20; <script type="module" src="../js/irrigation.js"></script>
+
+</body>
+</html>

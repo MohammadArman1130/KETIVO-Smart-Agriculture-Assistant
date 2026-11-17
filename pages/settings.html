@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Settings – KETHIVO</title>
+  <link rel="icon" type="image/png" href="assets/images/kethivo-logo.png">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/dashboard.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body data-base="../">
+  <div class="app-layout">
+    <aside class="sidebar" id="sidebar"></aside>
+    <div class="main-wrapper">
+      <header class="topbar" id="topbar"></header>
+      <main class="page-content">
+        <div class="panel" style="max-width:600px;">
+          <div class="panel-header"><h2 data-i18n="settings_title">Application Settings</h2></div>
+          <form id="settingsForm">
+            <div class="form-group">
+              <label class="form-label">Preferred Language / ಆದ್ಯತೆಯ ಭಾಷೆ</label>
+              <select id="settingLang" class="form-control">
+                <option value="en">English</option>
+                <option value="kn">ಕನ್ನಡ (Kannada)</option>
+              </select>
+            </div>
+            <button type="submit" class="btn btn-primary" data-i18n="save_changes">Save Changes</button>
+          </form>
+          <hr style="margin:24px 0; border:none; border-top:1px solid var(--border);">
+          <h3 style="margin-bottom:10px;">Account Security</h3>
+          <button type="button" id="resetPwSettingsBtn" class="btn btn-outline">Send Password Reset Email</button>
+        </div>
+      </main>
+    </div>
+  </div>
+  <script type="module" src="../js/profile.js"></script>
+</body>
+</html>

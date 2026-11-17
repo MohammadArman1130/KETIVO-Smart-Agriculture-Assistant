@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Market Prices – KETHIVO</title>
+  <link rel="icon" type="image/png" href="assets/images/kethivo-logo.png">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/dashboard.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script>
+</head>
+<body data-base="../">
+  <div class="app-layout">
+    <aside class="sidebar" id="sidebar"></aside>
+    <div class="main-wrapper">
+      <header class="topbar" id="topbar"></header>
+      <main class="page-content">
+        <div class="alert alert-warning">
+          <strong>Data Transparency Notice:</strong> Prices displayed below are curated reference/historical sample figures modeled after AGMARKNET mandi ranges (Nov 2026) and are clearly marked as non-live reference data.
+        </div>
+
+        <div class="panel">
+          <div class="panel-header"><h2 data-i18n="market_title">Agricultural Market Prices</h2></div>
+          <div class="grid-2" style="gap:14px;">
+            <div class="form-group" style="margin-bottom:0;">
+              <label class="form-label" data-i18n="market_search">Search Crop / District</label>
+              <input type="text" id="marketSearch" class="form-control" placeholder="Search Paddy, Ragi, Mandya, Tomato...">
+            </div>
+            <div class="form-group" style="margin-bottom:0;">
+              <label class="form-label" data-i18n="state_label">State</label>
+              <select id="marketState" class="form-control">
+                <option value="All">All States</option>
+                <option value="Karnataka">Karnataka</option>
+                <option value="Maharashtra">Maharashtra</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel">
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr><th>Crop</th><th>Mandi / Location</th><th>Min Price</th><th>Max Price</th><th>Modal Price</th><th>Source &amp; Date</th></tr>
+              </thead>
+              <tbody id="marketTableBody"></tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="grid-2">
+          <div class="panel">
+            <div class="panel-header"><h3>6-Month Price Trend (₹/Quintal)</h3></div>
+            <canvas id="marketTrendChart" height="170"></canvas>
+          </div>
+          <div class="panel">
+            <div class="panel-header"><h3 data-i18n="market_compare">Market Price Comparison</h3></div>
+            <canvas id="marketCompareChart" height="170"></canvas>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+  <script type="module" src="../js/market.js"></script>
+</body>
+</html>

@@ -1,0 +1,277 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KETHIVO – Smart Agriculture Assistant</title>
+  <link rel="icon" type="image/png" href="assets/images/kethivo-logo.png">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a href="index.html" class="brand-logo">     <img src="assets/images/kethivo-logo.png" alt="KETHIVO – Smart Agriculture Assistant"> </a>
+
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" data-i18n="nav_home">Home</a></li>
+        <li><a href="#features" data-i18n="nav_features">Features</a></li>
+        <li><a href="#about" data-i18n="nav_about">About</a></li>
+        <li><a href="#contact" data-i18n="nav_contact">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <select class="lang-select" aria-label="Language Selector">
+          <option value="en">English</option>
+          <option value="kn">ಕನ್ನಡ</option>
+        </select>
+        <a href="login.html" class="btn btn-outline btn-sm" data-i18n="nav_login">Login</a>
+        <a href="register.html" class="btn btn-primary btn-sm" data-i18n="nav_get_started">Get Started</a>
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle Menu">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div>
+          <span class="hero-badge" data-i18n="hero_badge">Software-First Smart Agriculture Platform</span>
+          <h1 data-i18n="hero_title">Smart Agriculture for Every Farmer.</h1>
+          <p data-i18n="hero_desc">Empowering farmers with intelligent recommendations, real-time agricultural information and technology-driven farming assistance.</p>
+          <div class="hero-cta">
+            <a href="register.html" class="btn btn-primary btn-lg" data-i18n="nav_get_started">Get Started</a>
+            <a href="#features" class="btn btn-outline btn-lg" data-i18n="hero_explore">Explore Features</a>
+          </div>
+          <div class="hero-stats">
+            <div class="stat-item">
+              <strong data-i18n="stat_hardware">Zero Hardware</strong>
+              <span data-i18n="stat_hardware_sub">No sensors or Arduino needed</span>
+            </div>
+            <div class="stat-item">
+              <strong data-i18n="stat_lang">Bilingual</strong>
+              <span data-i18n="stat_lang_sub">English &amp; Kannada ready</span>
+            </div>
+            <div class="stat-item">
+              <strong data-i18n="stat_weather">Live Weather</strong>
+              <span data-i18n="stat_weather_sub">Real-time Open-Meteo data</span>
+            </div>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <img src="assets/images/hero-farm.svg" alt="Smart Agriculture Dashboard Illustration">
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="section section-white" id="about">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag" data-i18n="about_tag">About KETHIVO</span>
+          <h2 data-i18n="about_title">Practical Digital Guidance Built for Indian Farmers</h2>
+          <p data-i18n="about_desc">KETHIVO brings weather intelligence, crop planning, irrigation scheduling estimates, AI leaf screening, fertilizer guidance, and market trends into one clean, accessible workspace—without costly field hardware.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section class="section" id="features">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag" data-i18n="features_tag">Core Capabilities</span>
+          <h2 data-i18n="features_title">Everything Needed for Informed Farming Decisions</h2>
+        </div>
+        <div class="grid-3">
+          <div class="card">
+            <div class="icon-box">💧</div>
+            <h3 data-i18n="f_irr_title">Smart Irrigation Advisory</h3>
+            <p data-i18n="f_irr_desc">Software-based irrigation estimates combining crop stage, soil type, field condition, and live rainfall forecasts.</p>
+          </div>
+          <div class="card">
+            <div class="icon-box">🌱</div>
+            <h3 data-i18n="f_crop_title">Crop Recommendation</h3>
+            <p data-i18n="f_crop_desc">Rule-based regional crop matching tailored to your state, district, water availability, and season.</p>
+          </div>
+          <div class="card">
+            <div class="icon-box">⛅</div>
+            <h3 data-i18n="f_weather_title">Live Weather Forecast</h3>
+            <p data-i18n="f_weather_desc">Real-time temperature, humidity, wind, rainfall, and 7-day forecasts with farming advisories.</p>
+          </div>
+          <div class="card">
+            <div class="icon-box">🔬</div>
+            <h3 data-i18n="f_disease_title">AI Disease Detection</h3>
+            <p data-i18n="f_disease_desc">Upload crop leaf photos for AI-assisted disease screening, symptoms, and preventive actions.</p>
+          </div>
+          <div class="card">
+            <div class="icon-box">🧪</div>
+            <h3 data-i18n="f_fert_title">Fertilizer Advisory</h3>
+            <p data-i18n="f_fert_desc">Stage-wise nutrient planning with optional NPK/pH soil test inputs and soil health guidance.</p>
+          </div>
+          <div class="card">
+            <div class="icon-box">📈</div>
+            <h3 data-i18n="f_market_title">Market Prices &amp; Trends</h3>
+            <p data-i18n="f_market_desc">Compare mandi prices across regions and visualize historical trends using interactive charts.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="section section-white">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag" data-i18n="how_tag">How It Works</span>
+          <h2 data-i18n="how_title">Three Simple Steps to Smarter Farming</h2>
+        </div>
+        <div class="grid-3">
+          <div class="card">
+            <span class="step-num">1</span>
+            <h3 data-i18n="step1_title">Create Farmer Profile</h3>
+            <p data-i18n="step1_desc">Register with your district, soil, and language preference in under a minute.</p>
+          </div>
+          <div class="card">
+            <span class="step-num">2</span>
+            <h3 data-i18n="step2_title">Enter Field Details</h3>
+            <p data-i18n="step2_desc">Select your crop, weather location, or upload a leaf photograph.</p>
+          </div>
+          <div class="card">
+            <span class="step-num">3</span>
+            <h3 data-i18n="step3_title">Act on Clear Guidance</h3>
+            <p data-i18n="step3_desc">Receive bilingual recommendations and save every activity in your farming history.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Benefits & Tech Highlights -->
+    <section class="section">
+      <div class="container grid-2">
+        <div class="card">
+          <span class="section-tag" data-i18n="benefits_tag">Farmer Benefits</span>
+          <h3 style="font-size:1.35rem; margin-bottom:12px;" data-i18n="benefits_title">Designed for Smallholder &amp; Experienced Farmers</h3>
+          <ul style="padding-left:18px; color:var(--text-secondary); display:grid; gap:8px;">
+            <li>Works on any smartphone browser with zero IoT sensor setup cost.</li>
+            <li>Transparent advisories that clearly distinguish estimates from field measurements.</li>
+            <li>Seamless Kannada (ಕನ್ನಡ) and English switching on every screen.</li>
+            <li>Personal Farming History secured per farmer in Cloud Firestore.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <span class="section-tag" data-i18n="tech_tag">Technology Stack</span>
+          <h3 style="font-size:1.35rem; margin-bottom:12px;" data-i18n="tech_title">Reliable Cloud &amp; Open Meteorological Architecture</h3>
+          <ul style="padding-left:18px; color:var(--text-secondary); display:grid; gap:8px;">
+            <li><strong>Frontend:</strong> Responsive HTML5, CSS3 &amp; Modular ES6 JavaScript.</li>
+            <li><strong>Backend:</strong> Firebase Authentication &amp; Cloud Firestore with strict security rules.</li>
+            <li><strong>APIs:</strong> Live Open-Meteo Weather, Gemini Vision Serverless Proxy &amp; Chart.js.</li>
+            <li><strong>Security:</strong> Zero API secrets in client source code.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section section-white" id="contact">
+      <div class="container" style="max-width:680px;">
+        <div class="section-header" style="margin-bottom:28px;">
+          <span class="section-tag" data-i18n="contact_tag">Contact Us</span>
+          <h2 data-i18n="contact_title">Have Questions or Hackathon Feedback?</h2>
+        </div>
+        <div class="card">
+          <form id="contactForm">
+            <div class="form-group">
+              <label class="form-label" data-i18n="contact_name">Full Name</label>
+              <input type="text" class="form-control" id="contactName" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" data-i18n="contact_email">Email Address</label>
+              <input type="email" class="form-control" id="contactEmail" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" data-i18n="contact_msg">Message</label>
+              <textarea class="form-control" id="contactMsg" required></textarea>
+            </div>
+            <div id="contactAlert" class="alert alert-success hidden"></div>
+            <button type="submit" class="btn btn-primary" data-i18n="contact_send">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <img src="assets/images/logo-white.svg" alt="KETHIVO" style="height:40px; margin-bottom:14px;">
+          <p style="color:#C8E6C9; font-size:0.9rem;">Intelligent, transparent, hardware-free agricultural guidance for farmers across India.</p>
+        </div>
+        <div>
+          <h4>Platform</h4>
+          <ul>
+            <li><a href="dashboard.html">Farmer Dashboard</a></li>
+            <li><a href="pages/irrigation.html">Smart Irrigation</a></li>
+            <li><a href="pages/crop-recommendation.html">Crop Advisory</a></li>
+            <li><a href="pages/weather.html">Live Weather</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Tools</h4>
+          <ul>
+            <li><a href="pages/disease-detection.html">Disease Detection</a></li>
+            <li><a href="pages/fertilizer.html">Fertilizer Guide</a></li>
+            <li><a href="pages/market-prices.html">Market Prices</a></li>
+            <li><a href="pages/history.html">Farming History</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Account</h4>
+          <ul>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="register.html">Register</a></li>
+            <li><a href="#contact">Support</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 KETHIVO – Smart Agriculture Assistant.</span>
+        <span>Built for National-Level Hackathon Demonstration.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module">
+    import { applyTranslations, getLang, setLang, t } from './js/translations.js';
+    import { db, isConfigured, addDoc, collection, serverTimestamp } from './js/firebase-client.js';
+
+    applyTranslations();
+    document.querySelectorAll('.lang-select').forEach(sel => {
+      sel.value = getLang();
+      sel.addEventListener('change', e => setLang(e.target.value));
+    });
+
+    document.getElementById('mobileMenuBtn').addEventListener('click', () => {
+      document.getElementById('navLinks').classList.toggle('open');
+    });
+
+    document.getElementById('contactForm').addEventListener('submit', async e => {
+      e.preventDefault();
+      const name = document.getElementById('contactName').value.trim();
+      const email = document.getElementById('contactEmail').value.trim();
+      const message = document.getElementById('contactMsg').value.trim();
+      if (isConfigured && db) {
+        try {
+          await addDoc(collection(db, 'ContactMessages'), { name, email, message, createdAt: serverTimestamp() });
+        } catch {}
+      }
+      const box = document.getElementById('contactAlert');
+      box.textContent = t('contact_success');
+      box.classList.remove('hidden');
+      e.target.reset();
+    });
+  </script>
+</body>
+</html>
