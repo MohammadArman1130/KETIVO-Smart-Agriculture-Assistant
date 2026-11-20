@@ -168,13 +168,13 @@ KETIVO-Smart-Agriculture-Assistant/
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/YOUR-USERNAME/KETHIVO-Smart-Agriculture-Assistant.git
+git clone https://github.com/MohammadArman1130/KETIVO-Smart-Agriculture-Assistant.git
 ```
 
 Open the project folder:
 
 ```bash
-cd KETHIVO-Smart-Agriculture-Assistant
+cd KETIVO-Smart-Agriculture-Assistant
 ```
 
 ### 2. Install Dependencies
